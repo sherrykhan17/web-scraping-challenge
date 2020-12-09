@@ -24,15 +24,14 @@ mongo = PyMongo(app)
 @app.route("/")
 def index():
     mars = mongo.db.mars.find_one()
-    return render_template("index.html", mars=mars)
+    return render_template("./index.html", mars=mars)
 
 # Scrape Route to Import `nasa_scraper.py` Script & Call `scrape` Function
 @app.route("/scrape")
 def scrapper():
     mars = mongo.db.mars
     mars_data = scrape_all()
-    mars_data["mars_id"] = 1
-    mars.replace_one({"mars_id": 1}, mars_data, upsert=True)
+    mars.update({}, mars_data, upsert=True)
     return "Scraping Successful"
 
 # Define Main Behavior

@@ -1,0 +1,51 @@
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('header_img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+#vpadding {
+  padding: 25% 0;
+}
+
+#scale_id {
+  width: 500px;
+  height: 500px;
+  object-fit: fill;
+}
+
+.hemispheres-wrapper {
+  padding: 50px;
+}
+
+.hemispheres-wrapper h1 {
+  font-size: 30px;
+  padding: 10px 0; 
+  text-align: center;
+}
+
+.hemispheres-wrapper ul {
+  padding: 0;
+  margin: 0;
+}
+
+.hemispheres-wrapper ul li {
+  width: calc(50% - 40px);
+  float: left;
+  overflow: hidden;
+  margin: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #CCC;
+}
+
+.hemispheres-wrapper ul li img {
+  width: 100%;
+}
+
+.hemispheres-wrapper ul li h4 {
+  padding: 10px 0;
+}

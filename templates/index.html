@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Facts</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+
+  <header class="masthead"></header>
+  <!-- <img src="{{ mars.featured_image }}" /> -->
+
+  <!-- Mars Hemispheres -->
+  <div class="hemispheres-wrapper">
+    <h1>Hemispheres of Mars</h1>
+    <ul>
+      {% for data in mars.hemispheres %}
+        <li>
+          <img src="{{ data.img_url }}">
+          <h4 class="card-title text-center">{{ data.title }}</h4>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</body>
+
+</html>
